@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zoho_creator_config/send_mail.dart';
 
+import 'get_started_page.dart';
 import 'schedule_service.dart';
 import 'send_mail_screen.dart';
 
@@ -47,6 +48,15 @@ class _HomePageState extends State<HomePage> {
                 },
                 icon: Icon(Icons.mail),
                 label: Text("Send Mail")),
+            ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => GetStartedScreen()));
+                },
+                icon: Icon(Icons.mail),
+                label: Text("Email Verification")),
           ],
         ),
       ),
